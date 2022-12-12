@@ -45,11 +45,8 @@ h1 {
     text-align: center;
 }
 
-.photographer_section article h2 {
-    color: #D3573C;
-    font-size: 36px;
-    line-height: 60px;
-    font-weight: 500;
+.photographer_section a {
+    text-decoration: none;
 }
 
 .photographer_section article img {
@@ -57,6 +54,13 @@ h1 {
     width: 200px;
     border-radius: 100%;
     object-fit: cover;
+}
+
+.photographer_section article h2 {
+    color: #D3573C;
+    font-size: 36px;
+    line-height: 60px;
+    font-weight: 500;
 }
 
 .photographer_section article .location {

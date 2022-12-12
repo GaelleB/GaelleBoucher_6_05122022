@@ -3,29 +3,29 @@ function photographerFactory(data) {
     const picture = `assets/photographers/${portrait}`;
 
     function getUserCardDOM() {
-        const article = document.createElement('article');
-        const img = document.createElement('img');
-        const h2 = document.createElement('h2');
-        const location = document.createElement('p');
-        const tag = document.createElement('p');
-        const prix = document.createElement('p');
-
-        img.setAttribute("src", picture);
-        img.setAttribute("alt", `Portrait de ${name}`)
-
-        h2.innerText = name;
-
-        location.classList.add("location");
-        location.innerText = `${city}, ${country}`;
-
-        tag.classList.add("tagline");
-        tag.innerText = data.tagline;
-
-        prix.classList.add("price");
-        prix.innerText = `${price}€/jour`;
-        
-        article.append(img, h2, location, tag, prix);
+        const article = document.createElement( 'article' );
+        article.innerHTML = `
+            <a href="./photographer.html?id=${id}" title="Lien vers ${name}"">
+                <img src="${picture}" alt="Portrait du photographe ${name}"/>
+                <h2>${name}</h2>
+            </a>
+            <p class="location">${city}, ${country}</p>
+            <p class="tagline">${tagline}</p>
+            <p class="price">${price}€/jour</p>
+        `
         return (article);
     }
-    return { name, picture, tagline, getUserCardDOM }
+
+    function photographerProfile() {
+        const sectionHeader = document.createElement('div');
+        sectionHeader.innerHTML = `
+            <h1>${name}</h1>
+            <h2 class="location">${city}, ${country}</h2>
+            <p class="tagline">${tagline}</p>
+            <img src="${picture}" alt="Portrait du photographe ${name}"/>
+        `
+        return (sectionHeader);
+    }
+
+    return { name, picture, location, tagline, getUserCardDOM, photographerProfile }
 }
