@@ -11,6 +11,8 @@ function photographerFactory(data) {
         const prix = document.createElement('p');
 
         img.setAttribute("src", picture);
+        img.setAttribute("alt", `Portrait de ${name}`)
+
         h2.innerText = name;
 
         location.classList.add("location");
