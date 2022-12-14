@@ -6,7 +6,7 @@ function photographerFactory(data) {
         const article = document.createElement( 'article' );
         article.innerHTML = `
             <a href="./photographer.html?id=${id}" title="Lien vers ${name}"">
-                <img src="${picture}" alt="Portrait du photographe ${name}"/>
+                <img src="${picture}" alt="Portrait de ${name}"/>
                 <h2>${name}</h2>
             </a>
             <p class="location">${city}, ${country}</p>
@@ -22,7 +22,7 @@ function photographerFactory(data) {
             <h1>${name}</h1>
             <h2 class="location">${city}, ${country}</h2>
             <p class="tagline">${tagline}</p>
-            <img src="${picture}" alt="Portrait du photographe ${name}"/>
+            <img src="${picture}" alt="Portrait de ${name}"/>
         `
         return (sectionHeader);
     }
