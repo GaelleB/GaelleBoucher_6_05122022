@@ -17,16 +17,14 @@ function photographerFactory(data) {
     }
 
     function photographerProfile() {
-        const sectionHeader = document.createElement('div');
-        sectionHeader.innerHTML = `
+        return `
         <div>
             <h1>${name}</h1>
-            <h2 class="location">${city}, ${country}</h2>
+            <p class="location">${city}, ${country}</p>
             <p class="tagline">${tagline}</p>
         </div>
-        <img src="${picture}" alt="Portrait de ${name}"/>
+        <img src="${picture}" alt="${name}"/>
         `
-        return (sectionHeader);
     }
 
     return { name, picture, location, tagline, getUserCardDOM, photographerProfile }

@@ -37,6 +37,7 @@
     width: 200px;
     object-fit: cover;
     border-radius: 100%;
+    order: 1;
 }
 
 .contact_button {
