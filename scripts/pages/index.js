@@ -4,7 +4,7 @@
     }
 
     // Fonction pour afficher les photographes sur la page d'accueuil
-    async function displayData(photographers) {
+    async function displayDataIndex(photographers) {
         console.log(photographers);
         const photographersSection = document.querySelector(".photographer_section");
         photographers.forEach((photographer) => {
@@ -17,6 +17,6 @@
     // Fonction pour afficher les photographes sur la page d'accueuil au moment du chargement de la page
     async function init() {
         const { photographers } = await getPhotographers();
-        displayData(photographers);
+        displayDataIndex(photographers);
     };
     init();

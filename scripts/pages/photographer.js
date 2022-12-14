@@ -6,6 +6,7 @@
         return photographersData
     }
 
+    // Fonction pour récupérer l'id dans l'URL
     function getPhotographerId(){
         const url = new URL(window.location)
         const photographerId = parseInt(url.searchParams.get("id"), 10)
@@ -15,10 +16,10 @@
     // Fonction pour afficher les photographes sur la page photographe
     async function displayData(photographer) {
         const photographerHeader = document.querySelector('.photograph-header');
-        const btnContact = document.querySelector('.contact_button');
         const photographerModel = photographerFactory(photographer);
         const sectionHeader = photographerModel.photographerProfile();
-        photographerHeader.insertBefore(sectionHeader, btnContact);
+        photographerHeader.insertAdjacentHTML("afterbegin", sectionHeader);
+        console.log(sectionHeader);
     };
 
     // Fonction pour afficher les photographes sur la page photographe au moment du chargement de la page

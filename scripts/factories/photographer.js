@@ -19,10 +19,12 @@ function photographerFactory(data) {
     function photographerProfile() {
         const sectionHeader = document.createElement('div');
         sectionHeader.innerHTML = `
+        <div>
             <h1>${name}</h1>
             <h2 class="location">${city}, ${country}</h2>
             <p class="tagline">${tagline}</p>
-            <img src="${picture}" alt="Portrait de ${name}"/>
+        </div>
+        <img src="${picture}" alt="Portrait de ${name}"/>
         `
         return (sectionHeader);
     }
