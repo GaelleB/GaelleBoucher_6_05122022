@@ -13,8 +13,8 @@
         return photographerId
     }
 
-    // Fonction pour afficher les photographes sur la page photographe
-    async function displayData(photographer) {
+    // Fonction pour afficher le photographe sur la page photographe
+    async function displayDataPhotographer(photographer) {
         const photographerHeader = document.querySelector('.photograph-header');
         const photographerModel = photographerFactory(photographer);
         const sectionHeader = photographerModel.photographerProfile();
@@ -22,11 +22,21 @@
         console.log(sectionHeader);
     };
 
+    async function displayDataMedias(medias) {
+        const mediaContainer = document.querySelector('main');
+        medias.forEach((media) => {
+            const mediaModel = mediaFactory(media);
+            const mediaCardHTML = mediaModel.getMediaCardHTML();
+            mediaContainer.insertAdjacentHTML(mediaCardHTML);
+            console.log(mediaModel);
+        });
+    };
+
     // Fonction pour afficher les photographes sur la page photographe au moment du chargement de la page
     async function init() {
         const { photographers } = await getPhotographers();
         const photographerId = getPhotographerId()
         const foundPhotographer = photographers.find((photographer) => photographer.id === photographerId)
-        displayData(foundPhotographer);
+        displayDataPhotographer(foundPhotographer);
     };
     init();
