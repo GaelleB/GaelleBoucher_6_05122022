@@ -1,9 +1,9 @@
     // Fonction pour récupérer les données des photographes
     async function getPhotographers() {
         const response = await fetch("../../data/photographers.json")
-        const photographersData = await response.json()
-        console.log(photographersData)
-        return photographersData
+        const photographersData = await response.json();
+        console.log(photographersData);
+        return photographersData;
     }
 
     // Fonction pour récupérer l'id dans l'URL
@@ -23,20 +23,26 @@
     };
 
     async function displayDataMedias(medias) {
-        const mediaContainer = document.querySelector('main');
+        const mediaContainer = document.querySelector('.photographer-medias');
         medias.forEach((media) => {
             const mediaModel = mediaFactory(media);
             const mediaCardHTML = mediaModel.getMediaCardHTML();
-            mediaContainer.insertAdjacentHTML(mediaCardHTML);
+            mediaContainer.insertAdjacentElement("beforeend", mediaCardHTML);
             console.log(mediaModel);
         });
     };
 
+    function getPhotographerMedias(medias, photographerId) {
+        return medias.filter(media => media.photographerId === photographerId);
+    }
+
     // Fonction pour afficher les photographes sur la page photographe au moment du chargement de la page
     async function init() {
-        const { photographers } = await getPhotographers();
+        const { photographers, media } = await getPhotographers();
         const photographerId = getPhotographerId()
         const foundPhotographer = photographers.find((photographer) => photographer.id === photographerId)
         displayDataPhotographer(foundPhotographer);
+        const photographerMedias = getPhotographerMedias(media, photographerId);
+        displayDataMedias(photographerMedias);
     };
     init();

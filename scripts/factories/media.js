@@ -15,7 +15,7 @@ function mediaFactory(data){
                 <div class="infos-media">
                     <p class="title">${title}</p>
                     <div class="likes">
-                        <p class="likes-count">${likes}</p> <i class="fa-solid fa-heart"></i>
+                        <p class="likes-count">${likes}</p> <i class="fas fa-heart"></i>
                     </div>
                 </div>
             </article>
@@ -32,7 +32,7 @@ function mediaFactory(data){
                 <div class="infos-media">
                     <p class="title">${title}</p>
                     <div class="likes">
-                        <p class="likes-count">${likes}</p> <i class="fa-solid fa-heart"></i>
+                        <p class="likes-count">${likes}</p> <i class="fas fa-heart"></i>
                     </div>
                 </div>
             </article>
