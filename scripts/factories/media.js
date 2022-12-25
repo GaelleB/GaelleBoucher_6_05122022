@@ -12,7 +12,6 @@ function mediaFactory(data){
                 <a href="#">
                     <video class="media-img" autoplay>
                         <source src="${videoSrc}" type="video/mp4">
-                        <i class="fas fa-play"></i>
                     </video>
                 </a>
                 <div class="infos-media">
