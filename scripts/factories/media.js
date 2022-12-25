@@ -10,12 +10,16 @@ function mediaFactory(data){
             mediaCardHTML.innerHTML = `
             <article>
                 <a href="#">
-                    <source src="${videoSrc}" type="mp4">
+                    <video class="media-img" autoplay>
+                        <source src="${videoSrc}" type="video/mp4">
+                        <i class="fas fa-play"></i>
+                    </video>
                 </a>
                 <div class="infos-media">
                     <p class="title">${title}</p>
                     <div class="likes">
-                        <p class="likes-count">${likes}</p> <i class="fas fa-heart"></i>
+                        <p class="likes-count">${likes}</p>
+                        <button class="like-button"><i class="fas fa-heart"></i></button>
                     </div>
                 </div>
             </article>
@@ -32,7 +36,8 @@ function mediaFactory(data){
                 <div class="infos-media">
                     <p class="title">${title}</p>
                     <div class="likes">
-                        <p class="likes-count">${likes}</p> <i class="fas fa-heart"></i>
+                        <p class="likes-count">${likes}</p> 
+                        <button class="like-button"><i class="fas fa-heart"></i></button>
                     </div>
                 </div>
             </article>

@@ -41,6 +41,72 @@
     order: 1;
 }
 
+.photographer-medias {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 50px auto;
+}
+
+.media-card article {
+    height: 350px;
+    width: 350px;
+}
+
+.media-card a {
+    position: relative;
+    display: block;
+}
+
+.media-card img, video {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.fa-play {
+    position: absolute;
+        width: 120px;
+        height: 120px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+}
+
+.media-card .infos-media {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-top: 10px;
+    color: #901C1C;
+}
+
+.media-card .title {
+    font-weight: normal;
+}
+
+.media-card .likes {
+    display: flex;
+    margin-left: auto;
+    color: #901C1C;
+}
+
+.like-button {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    color: #901C1C;
+    background-color: transparent;
+    border: none;
+    margin-left: 7px;
+}
+
 .contact_button {
     font-size: 20px;
     font-weight: bold;
