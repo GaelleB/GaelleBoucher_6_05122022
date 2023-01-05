@@ -36,6 +36,20 @@
         return medias.filter(media => media.photographerId === photographerId);
     }
 
+    function getTotalLikes() {
+        const likeCountElements = document.querySelectorAll(".likes-count");
+        let totalLikes = 0;
+
+        likeCountElements.forEach((likeCountElement) => {
+            const likeCountNumber = parseInt(likeCountElement.innerText, 10);
+            totalLikes += likeCountNumber;
+            console.log(likeCountNumber);
+        });
+
+        const totalLikesElement = document.querySelector(".total-likes");
+        totalLikesElement.innerText = totalLikes;
+    }
+
     // Fonction pour afficher les photographes sur la page photographe au moment du chargement de la page
     async function init() {
         const { photographers, media } = await getPhotographers();
@@ -44,5 +58,6 @@
         displayDataPhotographer(foundPhotographer);
         const photographerMedias = getPhotographerMedias(media, photographerId);
         displayDataMedias(photographerMedias);
+        getTotalLikes();
     };
     init();

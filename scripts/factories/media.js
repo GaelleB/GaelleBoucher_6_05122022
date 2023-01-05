@@ -22,8 +22,7 @@ function mediaFactory(data){
                     </div>
                 </div>
             </article>
-            `
-            return mediaCardHTML;
+            `;
         }
 
         if(image){
@@ -40,9 +39,32 @@ function mediaFactory(data){
                     </div>
                 </div>
             </article>
-            `
-            return mediaCardHTML;
+            `;
         }
+        const likeButton = mediaCardHTML.querySelector(".like-button");
+        likeButton.addEventListener("click", () => {
+            const mediaLikeElement = likeButton.previousElementSibling;
+            let mediaLikes = parseInt(mediaLikeElement.innerText, 10);
+
+            const totalLikesElement = document.querySelector(".total-likes");
+            let totalLikes = parseInt(totalLikesElement.innerText, 10);
+            const isMediaLiked = likeButton.classList.contains("liked");
+
+            if (isMediaLiked) {
+                totalLikes--;
+                mediaLikes--;
+                likeButton.classList.remove("liked");
+            } else {
+                totalLikes++;
+                mediaLikes++;
+                likeButton.classList.add("liked");
+            }
+            
+            totalLikesElement.innerText = totalLikes;
+            mediaLikeElement.innerText = mediaLikes;
+        });
+
+        return mediaCardHTML;
     }
 
     return { title, picture, videoSrc, likes, getMediaCardHTML }
