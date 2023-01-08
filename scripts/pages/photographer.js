@@ -50,6 +50,12 @@
         totalLikesElement.innerText = totalLikes;
     }
 
+    function getPrice(photographer) {
+        const photoPriceElement = document.querySelector(".photoPrice");
+        photoPriceElement.innerText = `${photographer.price} € / jour`;
+        console.log(photoPriceElement);
+    };
+
     // Fonction pour afficher les photographes sur la page photographe au moment du chargement de la page
     async function init() {
         const { photographers, media } = await getPhotographers();
@@ -59,5 +65,6 @@
         const photographerMedias = getPhotographerMedias(media, photographerId);
         displayDataMedias(photographerMedias);
         getTotalLikes();
+        getPrice(photographers);
     };
     init();
