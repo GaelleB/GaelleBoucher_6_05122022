@@ -52,8 +52,7 @@
 
     function getPrice(photographer) {
         const photoPriceElement = document.querySelector(".photoPrice");
-        photoPriceElement.innerText = `${photographer.price} € / jour`;
-        console.log(photoPriceElement);
+        photoPriceElement.innerText = `${photographer.price}€ / jour`;
     };
 
     // Fonction pour afficher les photographes sur la page photographe au moment du chargement de la page
@@ -65,6 +64,6 @@
         const photographerMedias = getPhotographerMedias(media, photographerId);
         displayDataMedias(photographerMedias);
         getTotalLikes();
-        getPrice(photographers);
+        getPrice(foundPhotographer);
     };
     init();
