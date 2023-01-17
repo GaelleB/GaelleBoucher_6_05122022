@@ -9,17 +9,20 @@
     <script src="https://kit.fontawesome.com/98eba29ae1.js" crossorigin="anonymous"></script>
     <title>Fisheye - photographe </title>
   </head>
+
   <body>
     <header>
       <a href="index.html" title="Lien vers la page d'accueil">
         <img src="assets/images/logo.png" class="logo" alt="Fisheye Home page"/>
       </a>
     </header>
+
     <main id="main">
       <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <button class="contact_button">Contactez-moi</button>
       </div>
       
+      <!-- Système de tri -->
       <section class="sort-container">
         <label for="sort-medias">Trier par</label>
         <select name="sort-medias" id="sort-medias">
@@ -33,6 +36,7 @@
       <!-- Insertion des medias du photographe -->
       </div>
 
+      <!-- Encart -->
       <section class="encart-container">
         <div class="likes-container">
           <h3 class="total-likes">0</h3>
@@ -42,7 +46,8 @@
       </section>
 
     </main>
-    
+
+    <!-- Formulaire de contact -->
     <div id="contact_modal" role="dialog" aria-hidden="true">
       <div class="modal">
         <header>
@@ -70,6 +75,22 @@
         </form>
         
       </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+      <button class="lightbox__close">
+        <img src="assets/icons/close.svg" alt="Fermer la fenêtre"/>
+      </button>
+      <button class="lightbox__prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="lightbox__container">
+        <img src="https://picsum.photos/seed/picsum/900/1800" alt="">
+      </div>
+      <button class="lightbox__next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
 
     <script src="scripts/factories/photographer.js"></script>
