@@ -7,7 +7,7 @@ function lighboxFactory(data) {
         if (video) {
             return `
             <article class="hide" data-id="${id}">
-                <video class="media-img" autoplay>
+                <video class="media-lightbox" autoplay>
                     <source src="${videoSrc}" type="video/mp4">
                 </video>
                 <div class="infos-media">
@@ -20,7 +20,7 @@ function lighboxFactory(data) {
         if (image) {
             return `
             <article class="hide" data-id="${id}">
-                <img class="media-img" src="${picture}" alt="Titre de l'image ${title}"/>
+                <img class="media-lightbox" src="${picture}" alt="Titre de l'image ${title}"/>
                 <div class="infos-media">
                     <p class="title">${title}</p>
                 </div>

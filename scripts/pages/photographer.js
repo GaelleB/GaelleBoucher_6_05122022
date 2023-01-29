@@ -32,7 +32,6 @@ async function displayDataMedias(medias) {
     });
 };
 
-
 async function displayLightboxMedias(medias) {
     const lightboxContainer = document.querySelector('.lightbox__container');
     lightboxContainer.innerHTML = "";
