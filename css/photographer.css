@@ -168,6 +168,11 @@ video {
     cursor: pointer;
 }
 
+.contact_button:hover {
+    background-color: #DB8876;
+    color: black;
+}
+
 .modal {
     position: fixed;
     top: 50%;
@@ -195,11 +200,12 @@ video {
     cursor: pointer;
 }
 
-.modal header h2 {
+.modal header h1 {
     font-size: 64px;
     font-weight: normal;
     width: 100%;
     margin: 0;
+    color: black;
 }
 
 form {
@@ -227,6 +233,8 @@ form input {
     height: 68px;
     border: none;
     border-radius: 5px;
+    font-size: 25px;
+    padding: 15px;
 }
 
 .lightbox {
@@ -246,7 +254,7 @@ form input {
     background-color: transparent;
     position: fixed;
     top: 0;
-    right: 0px;
+    right: 0;
     cursor: pointer;
     transition: .3s;
     font-size: 4rem;
