@@ -248,21 +248,20 @@ form input {
 
 .lightbox__next,
 .lightbox__prev {
-    bottom: 0;
     border: none;
     color: #901C1C;
     background-color: transparent;
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 50%;
+    right: 2%;
     cursor: pointer;
     transition: .3s;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .lightbox__prev {
     right: auto;
-    left: 0px;
+    left: 2%;
 }
 
 .lightbox__close {
