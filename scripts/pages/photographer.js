@@ -25,6 +25,7 @@ async function displayDataPhotographer(photographer) {
 
 async function displayDataMedias(medias) {
     const mediaContainer = document.querySelector('.photographer-medias');
+    mediaContainer.innerHTML = "";
     medias.forEach((media) => {
         const mediaModel = mediaFactory(media);
         const mediaCardHTML = mediaModel.getMediaCardHTML();
@@ -70,11 +71,17 @@ async function init() {
     const { photographers, media } = await getPhotographers();
     const photographerId = getPhotographerId();
     const foundPhotographer = photographers.find((photographer) => photographer.id === photographerId);
+    const formModaleTitle = document.querySelector("#contact_modal h1");
+    formModaleTitle.innerText = `Contactez-moi ${foundPhotographer.name}`;
     displayDataPhotographer(foundPhotographer);
     photographerMedias = getPhotographerMedias(media, photographerId);
     displayDataMedias(photographerMedias);
     displayLightboxMedias(photographerMedias);
     getTotalLikes();
     getPrice(foundPhotographer);
+    handleChange();
 };
 init();
+
+const menuSelect = document.getElementById("sort-medias");
+menuSelect.addEventListener("change", () => handleChange());
