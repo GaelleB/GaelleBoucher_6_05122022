@@ -1,7 +1,3 @@
-#contact_modal {
-    display: none;
-}
-
 .photograph-header {
     background-color: #FAFAFA;
     width: 85%;
@@ -25,12 +21,10 @@
     font-size: 25px;
     font-weight: 400;
     color: #901C1C;
-    padding-top: 18px;
 }
 
 .photograph-header .tagline {
     font-size: 18px;
-    padding-top: 30px;
     color: #525252;
 }
 
@@ -43,6 +37,93 @@
     margin-right: 20px;
 }
 
+.contact_button {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact_button:hover {
+    background-color: #DB8876;
+    color: black;
+}
+
+#contact_modal {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background-color: #DB8876;
+    width: 50%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+    margin: auto;
+    z-index: 1;
+}
+
+.modal header {
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.modal header img {
+    cursor: pointer;
+}
+
+.modal header h1 {
+    font-size: 60px;
+    font-weight: normal;
+    width: 100%;
+    margin: 0;
+    color: black;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form label {
+    color: #312E2E;
+    font-size: 36px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: self-start;
+    margin-bottom: 26px;
+}
+
+form input {
+    width: 100%;
+    height: 68px;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 15px;
+}
+
 .sort-container {
     margin: 20px 20px 0 115px;
 }
@@ -50,7 +131,7 @@
 .sort-container label {
     margin-right: 20px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 .sort-container select {
@@ -59,6 +140,7 @@
     color: white;
     padding: 15px 20px;
     border-radius: 10px;
+    transition: 300ms ease-in-out;
 }
 
 .photographer-medias {
@@ -151,88 +233,6 @@ video {
 
 .photoPrice {
     font-size: 25px;
-}
-
-.contact_button {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 11px;
-    width: 170px;
-    height: 70px;
-    border: none;
-    background-color: #901C1C;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact_button:hover {
-    background-color: #DB8876;
-    color: black;
-}
-
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    background-color: #DB8876;
-    width: 50%;
-    max-width: 650px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px;
-    margin: auto;
-}
-
-.modal header {
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-}
-
-.modal header img {
-    cursor: pointer;
-}
-
-.modal header h1 {
-    font-size: 64px;
-    font-weight: normal;
-    width: 100%;
-    margin: 0;
-    color: black;
-}
-
-form {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-form label {
-    color: #312E2E;
-    font-size: 36px;
-}
-
-form div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: self-start;
-    margin-bottom: 26px;
-}
-
-form input {
-    width: 100%;
-    height: 68px;
-    border: none;
-    border-radius: 5px;
-    font-size: 25px;
-    padding: 15px;
 }
 
 .lightbox {
