@@ -45,7 +45,7 @@
     width: 170px;
     height: 70px;
     border: none;
-    background-color: #901C1C;
+    background-color: #901c1c;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -271,8 +271,9 @@ video {
     height: 40px;
     border: none;
     top: 20px;
-    right: 10px;
-    background-color: #901C1C;
+    right: 50px;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .lightbox__container {
