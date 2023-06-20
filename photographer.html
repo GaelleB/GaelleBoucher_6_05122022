@@ -28,7 +28,7 @@
         <div class="modal">
           <header>
             <h1>Contactez-moi</h1>
-            <button class="close_modal" aria-label="Fermer le formulaire">
+            <button class="close_modal" aria-label="Fermer le formulaire" role="button" tabindex="0">
               <img src="assets/icons/closeModal.svg" alt="icon fermeture"/>
             </button>
           </header>
@@ -56,7 +56,7 @@
       <!-- Système de tri -->
       <section class="sort-container">
         <label for="sort-medias">Trier par</label>
-        <select name="sort-medias" id="sort-medias">
+        <select name="sort-medias" id="sort-medias" tabindex="0">
           <option value="popularity">Popularité</option>
           <option value="date">Date</option>
           <option value="title">Titre</option>
@@ -78,16 +78,16 @@
 
       <!-- Lightbox -->
       <div class="lightbox hide" role="dialog" aria-label="Lightbox ouverte. Vous pouvez naviguer dans les médias avec les flèches gauche et droite">
-        <button class="lightbox__close" aria-label="Fermer la lighbox">
-          <img src="assets/icons/closeLightbox.svg" alt="Fermer la lighbox" />
+        <button class="lightbox__close" aria-label="Fermer la lighbox" role="button" tabindex="0">
+          <img src="assets/icons/closeLightbox.svg" alt="Fermer la lighbox"/>
         </button>
-        <button class="lightbox__prev" aria-label="Média précédent">
+        <button class="lightbox__prev" aria-label="Média précédent" role="button" tabindex="0">
           <i class="fas fa-chevron-left"></i>
         </button>
         <div class="lightbox__container">
           <!-- Insertion des médias dans la lightbox -->
         </div>
-        <button class="lightbox__next" aria-label="Média suivant">
+        <button class="lightbox__next" aria-label="Média suivant" role="button" tabindex="0">
           <i class="fas fa-chevron-right"></i>
         </button>
       </div>
